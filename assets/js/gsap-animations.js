@@ -150,3 +150,32 @@ function gsapRollInLeft(selector) {
     });
   });
 }
+
+function gsap_rotate_bl__float(selector) {
+  gsap.utils.toArray(selector).forEach((el) => {
+    gsap.from(el, {
+      rotation: -90,
+      scale: 0.8,
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      ease: "back.out(1.2)",
+      transformOrigin: "left bottom",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+      onComplete: () => {
+        gsap.to(el, {
+          y: -15,
+          rotation: 3,
+          duration: 1.5,
+          ease: "sine.inOut",
+          repeat: -1,     // lặp vô hạn
+          yoyo: true      // quay lại vị trí ban đầu
+        });
+      }
+    });
+  });
+}

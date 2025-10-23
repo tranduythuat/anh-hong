@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsapRotateBottomRight(".rotate-br");
   gsapFlipVerticalLeft(".flip-vertical-left");
   gsapRollInLeft(".roll-in-left");
+  gsap_rotate_bl__float(".rotate-bl--float");
 
   // Tạo timeline
   const tl = gsap.timeline({
