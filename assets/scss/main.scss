@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'animations';
-@import 'components/buttons';
+@use "variables";
+@use "fonts";
+@use "mixins";
+@use "base";
+@use "layout";
+@use "animations";

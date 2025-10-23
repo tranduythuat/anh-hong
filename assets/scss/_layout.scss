@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 header {
     @include flex-center;
     background: $primary-color;
