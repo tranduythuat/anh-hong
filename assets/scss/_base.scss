@@ -11,7 +11,7 @@ body {
     font-family: $font-main;
     font-weight: 300;
     background: $bg-color;
-    color: #333;
+    color: $primary-color;
     @include flex-center;
 }
 

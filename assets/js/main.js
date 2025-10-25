@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   gsapFadeIn(".animate-fade");
   gsapFadeRight(".fade-right");
   gsapFadeLeft(".fade-left");
+  gsapFadeUp(".fade-up");
+  gsapFadeDown(".fade-down");
   gsapRotateBottomLeft(".rotate-bl");
   gsapRotateBottomRight(".rotate-br");
   gsapFlipVerticalLeft(".flip-vertical-left");
