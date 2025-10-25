@@ -1,0 +1,589 @@
+@font-face {
+  font-family: "1FTV-BLUSHING-ROSE";
+  src: url("../../assets/fonts/1FTV-BLUSHING-ROSE.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-AARON-SCRIPT";
+  src: url("../../assets/fonts/SVN-AARON-SCRIPT.OTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-Gotham";
+  src: url("../../assets/fonts/SVN-Gotham.woff2") format("woff2"), url("../../assets/fonts/SVN-Gotham.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamLight";
+  src: url("../../assets/fonts/SVN-GothamLight.woff2") format("woff2"), url("../../assets/fonts/SVN-GothamLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SVN-AARON-SCRIPT", sans-serif;
+  font-weight: 300;
+  background: #ffffff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: white;
+  padding: 1rem;
+}
+
+section {
+  padding: 0;
+}
+
+.image-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+.image-wrapper img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.animate-flip {
+  transform-origin: left center;
+  transform: rotateY(-120deg) scale(0.9);
+  opacity: 0;
+  filter: brightness(0.6);
+  backface-visibility: hidden;
+  transition: none;
+}
+
+.animate-flip.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.hero {
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+.hero .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(213, 213, 213, 0.159), rgba(0, 0, 0, 0.578));
+  z-index: 1;
+}
+.hero .hero-text {
+  width: 100%;
+  position: absolute;
+  bottom: 15%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 2;
+}
+.hero .hero-text h1 {
+  font-family: "1FTV-BLUSHING-ROSE", sans-serif;
+  font-weight: 300;
+  font-size: 1.813em;
+  text-transform: uppercase;
+  letter-spacing: 0.65em;
+}
+.hero .hero-text p {
+  font-family: "1FTV-BLUSHING-ROSE", sans-serif;
+  font-size: 0.875em;
+  padding-top: 16px;
+  letter-spacing: 1.2px;
+}
+@media (max-width: 480px) {
+  .hero .hero-text h1 {
+    font-size: 6vw;
+  }
+  .hero .hero-text p {
+    font-size: 3vw;
+  }
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.intro h2.couple-names {
+  font-size: 1.813em;
+  font-family: "1FTV-BLUSHING-ROSE", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-top: 25%;
+  padding-bottom: 20px;
+}
+.intro .family-info {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-weight: 300;
+  font-size: 0.738em;
+  padding-bottom: 25%;
+}
+.intro .intro-image {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 480/1000;
+  max-height: 1000px;
+  background-color: #231f20;
+}
+.intro .intro-image img {
+  width: 95%;
+  height: auto;
+  margin: 5% 0;
+}
+.intro .intro-image .intro-text {
+  color: #ffffff;
+}
+.intro .intro-image .intro-text p {
+  font-size: 1.1em;
+  padding: 3px;
+}
+.intro .logo {
+  width: 100%;
+  padding: 15% 0;
+}
+.intro .logo img {
+  width: 20%;
+  height: auto;
+}
+@media (max-width: 480px) {
+  .intro h2.couple-names {
+    font-size: 6vw;
+  }
+  .intro .family-info p {
+    font-size: 2.5vw;
+  }
+  .intro .intro-image .intro-text p {
+    font-size: 3.8vw;
+  }
+}
+
+.wedding-info {
+  text-align: center;
+}
+.wedding-info .subtext {
+  font-family: "SVN-GothamLight", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.67em;
+  line-height: 1.5;
+}
+.wedding-info .venue {
+  padding: 10% 0;
+}
+.wedding-info .venue h4 {
+  font-family: "SVN-GothamLight", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.67em;
+}
+.wedding-info .venue h2.venue-name {
+  font-family: "SVN-Gotham", sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.wedding-info .venue p.venue-address {
+  font-family: "SVN-GothamLight", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.67em;
+  padding: 5px 0 10px;
+}
+.wedding-info .venue .btn-map {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #000;
+  border: solid 1px #000;
+  padding: 4px 20%;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+.wedding-info .venue .btn-map:hover {
+  background-color: #000;
+  color: #ffffff;
+  transition: 0.8s ease;
+}
+.wedding-info .date-time h2 {
+  font-size: 4em;
+  font-weight: 300;
+  padding: 20% 0 5%;
+}
+.wedding-info .date-time .timeline {
+  display: flex;
+  justify-content: center;
+  min-height: 130px;
+  padding-bottom: 20%;
+}
+.wedding-info .date-time .timeline .timeline-item {
+  flex: 1;
+  flex-grow: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  padding: 2%;
+}
+.wedding-info .date-time .timeline .timeline-item .title {
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85em;
+}
+.wedding-info .date-time .timeline .timeline-item .hour {
+  font-size: 0.85em;
+}
+.wedding-info .date-time .timeline .timeline-item .dot-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25px;
+}
+.wedding-info .date-time .timeline .timeline-item .dot-icon-box .dot-icon {
+  width: 8.6px;
+  height: 8.6px;
+  border-radius: 50px;
+  background-color: #000000;
+  position: relative;
+}
+.wedding-info .date-time .timeline .timeline-item .dot-icon-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  z-index: 1;
+  transform: translateX(50%);
+}
+.wedding-info .date-time .timeline .timeline-item:nth-child(5) .dot-icon-box::after {
+  display: none;
+}
+.wedding-info .date-time .timeline .timeline-item .image-icon {
+  margin: 0 auto;
+  width: 50%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wedding-info .date-time .timeline .timeline-item .image-icon img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 480px) {
+  .wedding-info .subtext {
+    font-size: 2.4vw;
+  }
+  .wedding-info .venue h4 {
+    font-size: 2.4vw;
+  }
+  .wedding-info .venue h2.venue-name {
+    font-size: 6.5vw;
+  }
+  .wedding-info .venue p.venue-address {
+    font-size: 2.2vw;
+  }
+  .wedding-info .date-time h2 {
+    font-size: 12vw;
+  }
+  .wedding-info .date-time .timeline .timeline-item .title {
+    font-size: 3vw;
+  }
+  .wedding-info .date-time .timeline .timeline-item .hour {
+    font-size: 3vw;
+  }
+  .wedding-info .date-time .timeline .timeline-item .dot-icon-box .dot-icon {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+
+.gallery {
+  width: 100%;
+  position: relative;
+}
+.gallery .gallery-row:first-child {
+  display: flex;
+  height: 330px;
+  max-height: 330px;
+}
+.gallery .gallery-row:first-child div:first-child, .gallery .gallery-row:first-child div:last-child {
+  flex: 0 0 27%; /* grow=0, shrink=0, basis=30% */
+  z-index: 3;
+}
+.gallery .gallery-row:first-child div:first-child img, .gallery .gallery-row:first-child div:last-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .gallery-row:first-child div:first-child img {
+  object-position: 80% 100%;
+}
+.gallery .gallery-row:first-child div.text-box {
+  flex: 0 0 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8em;
+  padding-left: 3%;
+  line-height: 1.5;
+}
+.gallery .gallery-row:last-child {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .gallery-row:last-child .img-box {
+  width: 46%;
+  height: 100%;
+}
+.gallery .gallery-row:last-child .img-box img {
+  width: 100%;
+  height: 100%;
+  object-position: 30% 100%;
+  object-fit: cover;
+}
+.gallery .image-overlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.gallery .image-overlay img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .gallery .gallery-row:first-child div.text-box {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 375px) {
+  .gallery .gallery-row:first-child {
+    height: 280px;
+    max-height: 280px;
+  }
+  .gallery .gallery-row:last-child {
+    height: 250px;
+    max-height: 250px;
+  }
+}
+
+.gallery-01 {
+  width: 100%;
+  padding: 30% 0;
+  position: relative;
+}
+.gallery-01 .gallery-row {
+  display: flex;
+  justify-content: center;
+}
+.gallery-01 .gallery-row .gallery-img {
+  width: 100%;
+}
+.gallery-01 .gallery-row .gallery-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.gallery-01 .gallery-row div {
+  flex: 0 0 50%;
+}
+.gallery-01 .gallery-row:first-child {
+  margin-bottom: 30%;
+}
+.gallery-01 .gallery-row:first-child .gallery-text {
+  font-size: 0.7rem;
+  padding: 5%;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+.gallery-01 .gallery-row:first-child .gallery-text p:nth-child(3), .gallery-01 .gallery-row:first-child .gallery-text p:nth-child(6) {
+  padding-bottom: 15px;
+}
+.gallery-01 .gallery-row:last-child .gallery-text {
+  font-size: 1.5rem;
+  padding-left: 5%;
+  display: flex;
+  align-items: end;
+}
+.gallery-01 .image-overlay {
+  position: absolute;
+  max-width: 180px;
+  width: 100%;
+  aspect-ratio: 180/400;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gallery-01 .image-overlay img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.rsvp {
+  padding: 5%;
+}
+.rsvp p.title {
+  font-family: "SVN-Gotham", sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-bottom: 10%;
+}
+.rsvp .form-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.rsvp .form-group input[type=radio] {
+  display: none;
+}
+.rsvp .form-group .radio-button {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-size: 0.8em;
+  padding: 5px 7%;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+.rsvp .form-group input[type=radio]:hover + .radio-button {
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.3s ease-in;
+}
+.rsvp .form-group input[type=radio]:checked + .radio-button {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transition: 0.3s ease-in;
+}
+.rsvp .form-group input.input-text {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.rsvp .form-group input.input-text::placeholder {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-size: 0.8em;
+}
+.rsvp .form-group textarea.input-text {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-size: 0.8em;
+  width: 100%;
+  height: 86px;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.rsvp .form-group.options-group {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1em;
+}
+.rsvp .dietary-box {
+  text-align: center;
+}
+.rsvp .dietary-box p {
+  font-family: "SVN-GothamLight", sans-serif;
+  padding: 20px 0;
+}
+.rsvp .form-actions {
+  display: flex;
+  justify-content: center;
+}
+.rsvp .form-actions button.btn {
+  font-family: "SVN-GothamLight", sans-serif;
+  background-color: #cacaca;
+  border: none;
+  color: #000000;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.rsvp .form-actions button.btn:hover {
+  color: #fff;
+  background-color: rgba(41, 41, 41, 0.8431372549);
+}
+@media (max-width: 480px) {
+  .rsvp {
+    font-size: 4vw;
+  }
+}
+
+.end {
+  width: 100%;
+  min-height: 920px;
+  position: relative;
+  margin-top: 20%;
+}
+.end img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.end .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.179) 0%, rgba(220, 220, 220, 0.252) 50%, rgb(255, 255, 255) 100%);
+  z-index: 1;
+}
+.end .text-overlay {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  top: 15%;
+  transform: translateX(50%) translateY(100%) rotate(90deg);
+  z-index: 2;
+  font-size: 2.5em;
+  color: #ffffff;
+  letter-spacing: 4.5px;
+}
+
+/*# sourceMappingURL=main.css.map */
