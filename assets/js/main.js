@@ -16,19 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap_rotate_bl__float(".rotate-bl--float");
 
   // Tạo timeline
-  // const tl = gsap.timeline({
-  //   repeatDelay: 0,  // delay giữa các lần lặp
-  //   defaults: { duration: .8, ease: "power2.out" }, // giá trị mặc định
-  //   scrollTrigger: {
-  //     trigger: ".box",
-  //     start: "top 90%", // khi phần tử xuất hiện 80% trong viewport
-  //   }
-  // });
+  const tl = gsap.timeline({
+    repeatDelay: 0,  // delay giữa các lần lặp
+    defaults: { duration: .8, ease: "power2.out" }, // giá trị mặc định
+    scrollTrigger: {
+      trigger: ".timeline-item",
+      start: "top 80%", // khi phần tử xuất hiện 80% trong viewport
+    }
+  });
 
   // Thêm các animation theo thứ tự
-  // tl.from(".red", { x: -100, opacity: 0 })        // box đỏ bay xuống
-  //   .from(".blue", { x: -100, opacity: 0 }, "-=0.3")       // box xanh bay từ trái
-  //   .from(".green", { x: -100, opacity: 0 }, "-=0.3");    // box xanh lá phóng to dần
+  tl.from(".fist-animation", { x: -100, opacity: 0 })        // box đỏ bay xuống
+    .from(".second-animation", { x: -100, opacity: 0 }, "-=0.5")       // box xanh bay từ trái
+    .from(".third-animation", { x: -100, opacity: 0 }, "-=0.5")    // box xanh lá phóng to dần
+    .from(".four-animation", { x: -100, opacity: 0 }, "-=0.5");    // box xanh lá phóng to dần
 
   const form = document.forms["rsvp-form"];
   if (form) {

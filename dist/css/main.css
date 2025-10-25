@@ -162,6 +162,7 @@ section {
   aspect-ratio: 480/1000;
   max-height: 1000px;
   background-color: rgba(199, 213, 222, 0.8196078431);
+  perspective: 1000px;
 }
 .intro .intro-image img {
   width: 95%;
