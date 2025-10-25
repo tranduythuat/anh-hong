@@ -1,0 +1,109 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.rsvp {
+    padding: 5%;
+    p.title {
+        font-family: $font-svn-gotham;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 300;
+        padding-bottom: 10%;
+    }
+    .form-group {
+        width: 100%;
+        margin-bottom: 10px;
+        input[type="radio"] {
+            display: none;
+        }
+        
+        .radio-button {
+            font-family: $font-svn-gothamlight;
+            font-size: .8em;
+            padding: 5px 7%;
+            border-radius: 15px;
+            border: 1px solid #000000;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:hover+.radio-button {
+            background-color: #000000;
+            color: #ffffff;
+            transition: .3s ease-in;
+
+        }
+
+        input[type="radio"]:checked+.radio-button {
+            background-color: #000000;
+            color: #ffffff;
+            border-color: #000000;
+            transition: .3s ease-in;
+        }
+
+        input.input-text {
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: 1px solid #000000;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        input.input-text::placeholder {
+            font-family: $font-svn-gothamlight;
+            font-size: .8em;
+        }
+
+        textarea.input-text {
+            font-family: $font-svn-gothamlight;
+            font-size: .8em;
+            width: 100%;
+            height: 86px;
+            border-radius: 15px;
+            border: 1px solid #000000;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+
+    .form-group.options-group {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1em;
+    }
+
+    .dietary-box {
+        text-align: center;
+
+        p {
+            font-family: $font-svn-gothamlight;
+            padding: 20px 0;
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: center;
+        button.btn {
+            font-family: $font-svn-gothamlight;
+            background-color: #cacaca;
+            border: none;
+            color: #000000;
+            padding: 8px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button.btn:hover {
+            color: #fff;
+            background-color: #292929d7;
+        }
+    }
+
+    @media (max-width: 480px) {
+        font-size: 4vw;
+    }
+}

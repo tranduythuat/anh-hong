@@ -9,6 +9,17 @@
 
 body {
     font-family: $font-main;
+    font-weight: 300;
     background: $bg-color;
     color: #333;
+    @include flex-center;
+}
+
+.container {
+    position: relative;
+    max-width:480px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

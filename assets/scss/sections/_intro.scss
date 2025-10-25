@@ -1,0 +1,76 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h2.couple-names {
+        font-size: 1.813em;
+        font-family: $font-hero;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding-top: 25%;
+        padding-bottom: 20px;
+    }
+
+    .family-info {
+        font-family: $font-svn-gothamlight;
+        font-weight: 300;
+        font-size: 0.738em;
+        padding-bottom: 25%;
+    }
+
+    .intro-image {
+        width: 100%;
+        max-width: 480px;
+        aspect-ratio: 480 / 1000;
+        max-height: 1000px;
+        background-color: #231f20ff;
+
+        img {
+            width: 95%;
+            height: auto;
+            margin: 5% 0;
+        }
+
+        .intro-text {
+            color: #ffffff;
+            p {
+                font-size: 1.1em;
+                padding: 3px;
+            }
+        }
+    }
+
+    .logo {
+        width: 100%;
+        padding: 15% 0;
+        img {
+            width: 20%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2.couple-names {
+            font-size: 6vw;
+        }
+
+        .family-info {
+            p {
+                font-size: 2.5vw;
+            }
+        }
+        .intro-image {
+            .intro-text {
+                p {
+                    font-size: 3.8vw;
+                }
+            }
+        }
+    }
+}

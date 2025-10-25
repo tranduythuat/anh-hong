@@ -4,3 +4,10 @@
 @use "base";
 @use "layout";
 @use "animations";
+@use 'sections/hero';
+@use 'sections/intro';
+@use 'sections/info';
+@use 'sections/gallery';
+@use 'sections/gallery01';
+@use 'sections/rsvp';
+@use 'sections/end';
