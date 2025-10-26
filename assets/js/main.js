@@ -1,7 +1,7 @@
 // Kích hoạt ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Gọi các hiệu ứng có sẵn
+// Gọi các hiệu ứng có sẵn  
 document.addEventListener("DOMContentLoaded", () => {
   gsapFlipIn(".animate-flip");
   gsapFadeIn(".animate-fade");
@@ -32,12 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     .from(".four-animation", { x: -100, opacity: 0 }, "-=0.5");    // box xanh lá phóng to dần
 
   const form = document.forms["rsvp-form"];
+  const formEn = document.forms["rsvp-form-en"];
   if (form) {
-    form.addEventListener("submit", handleFormSubmit);
+    form.addEventListener("submit", (e) => handleFormSubmit(e, 'vi'));
+  }
+
+  if(formEn) {
+    formEn.addEventListener("submit", (e) => handleFormSubmit(e, 'en'));
   }
 });
 
-async function handleFormSubmit(e) {
+async function handleFormSubmit(e, lang) {
   e.preventDefault();
 
   const form = e.target;
@@ -56,8 +61,8 @@ async function handleFormSubmit(e) {
 
   // Thông báo khi bắt đầu gửi
   Swal.fire({
-    title: "Đang gửi /Sending/...",
-    text: "Vui lòng chờ trong giây lát /Please wait a moment/",
+    title: lang === 'vi' ? 'Đang gửi ...': 'Sending ...',
+    text: lang === 'vi'? "Vui lòng chờ trong giây lát": "Please wait a moment",
     icon: "info",
     allowOutsideClick: false,
     didOpen: () => {
@@ -65,8 +70,9 @@ async function handleFormSubmit(e) {
     },
   });
 
-  const url =
-    "";
+  const url = lang === 'vi' ? 'vi_url': 'en_url';
+
+  console.log('url', url)
 
   try {
     const res = await fetch(url, {
@@ -88,8 +94,8 @@ async function handleFormSubmit(e) {
 
     // Thông báo thành công
     Swal.fire({
-      title: "Thành công /Success/!",
-      text: "Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nha /Thank you for your feedback, the information has been sent to the bride and groom./",
+      title: lang === 'vi'? "Thành công!": "Success!",
+      text: lang === 'vi'? "Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nha": "Thank you for your feedback, the information has been sent to the bride and groom.",
       icon: "success",
       confirmButtonText: "OK",
       confirmButtonColor: "#000",
