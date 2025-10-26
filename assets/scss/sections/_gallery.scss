@@ -9,6 +9,7 @@
         height: 330px;
         max-height: 330px;
         div:first-child, div:last-child {
+            perspective: 1000px;
             flex: 0 0 27%; /* grow=0, shrink=0, basis=30% */
             z-index: 3;
             img {
