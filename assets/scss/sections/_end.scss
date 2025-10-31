@@ -12,27 +12,28 @@
         object-fit: cover;
     }
 
-    .overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            to top,
-            rgba(255, 255, 255, 0.179) 0%,
-            rgba(220, 220, 220, 0.252) 50%, /* lớp giữa */
-            rgb(255, 255, 255) 100%
-        );
-        z-index: 1;
-      }
+    // .overlay {
+    //     position: absolute;
+    //     inset: 0;
+    //     background: linear-gradient(
+    //         to top,
+    //         rgba(255, 255, 255, 0.179) 0%,
+    //         rgba(220, 220, 220, 0.252) 50%, /* lớp giữa */
+    //         rgb(255, 255, 255) 100%
+    //     );
+    //     z-index: 1;
+    // }
 
     .text-overlay {
         position: absolute;
+        width: 100%;
         top: 0;
         right: 50%;
-        top: 15%;
+        top: 25%;
         transform: translateX(50%) translateY(100%) rotate(90deg) ;
         z-index: 2;
-        font-size: 2.5em;
-        color: #4c7e7ed9;
+        font-size: 2em;
+        color: #2d8a8ae6;
         letter-spacing: 4.5px;
     }
 }

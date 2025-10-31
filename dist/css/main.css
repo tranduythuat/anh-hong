@@ -31,7 +31,7 @@
 body {
   font-family: "SVN-AARON-SCRIPT", sans-serif;
   font-weight: 300;
-  background: #ffffff;
+  background: hsla(0, 0%, 93%, 0.848);
   color: #5d8ba4;
   display: flex;
   justify-content: center;
@@ -100,7 +100,7 @@ section {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(213, 213, 213, 0.159), rgba(0, 0, 0, 0.578));
+  background: linear-gradient(to bottom, rgba(226, 226, 226, 0.135), rgba(0, 0, 0, 0.341));
   z-index: 1;
 }
 .hero .hero-text {
@@ -242,7 +242,7 @@ section {
   transition: 0.8s ease;
 }
 .wedding-info .date-time h2 {
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: 300;
   padding: 20% 0 5%;
 }
@@ -346,6 +346,7 @@ section {
   max-height: 330px;
 }
 .gallery .gallery-row:first-child div:first-child, .gallery .gallery-row:first-child div:last-child {
+  perspective: 1000px;
   flex: 0 0 27%; /* grow=0, shrink=0, basis=30% */
   z-index: 3;
 }
@@ -571,21 +572,16 @@ section {
   height: 100%;
   object-fit: cover;
 }
-.end .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.179) 0%, rgba(220, 220, 220, 0.252) 50%, rgb(255, 255, 255) 100%);
-  z-index: 1;
-}
 .end .text-overlay {
   position: absolute;
+  width: 100%;
   top: 0;
   right: 50%;
-  top: 15%;
+  top: 25%;
   transform: translateX(50%) translateY(100%) rotate(90deg);
   z-index: 2;
-  font-size: 2.5em;
-  color: rgba(76, 126, 126, 0.8509803922);
+  font-size: 2em;
+  color: rgba(45, 138, 138, 0.9019607843);
   letter-spacing: 4.5px;
 }
 

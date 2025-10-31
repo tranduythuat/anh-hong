@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "UVNKECHUYEN1";
+  src: url("../../assets/fonts/UVNKECHUYEN1.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SVN-AARON-SCRIPT", sans-serif;
+  font-weight: 300;
+  background: hsla(0, 0%, 93%, 0.848);
+  color: #5d8ba4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation-content {
+  background: url("../../assets/images/bg/ivitaion_bg.png") center/contain no-repeat;
+  max-width: 480px;
+  width: 100%;
+  aspect-ratio: 650/1153;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+}
+.invitation-content .box-logo {
+  width: 100%;
+  padding-bottom: 10%;
+}
+.invitation-content .box-logo img {
+  width: 15%;
+}
+.invitation-content .invitation-text {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+.invitation-content .name-couple {
+  padding: 5% 0;
+}
+.invitation-content .name-couple p {
+  font-family: "UVNKECHUYEN1", sans-serif;
+  font-size: 40px;
+}
+.invitation-content .name-couple p.middle {
+  font-size: 20px;
+}
+.invitation-content .divider {
+  width: 100%;
+  padding-bottom: 8%;
+}
+.invitation-content .divider img {
+  width: 8%;
+}
+.invitation-content .save-ourdate {
+  font-size: 9px;
+}
+.invitation-content .save-ourdate p {
+  line-height: 1.7;
+}
+.invitation-content .btn-group {
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.invitation-content .btn-group a.btn-link {
+  display: block;
+  font-size: 9px;
+  text-decoration: none;
+  color: #5d8ba4;
+  border: 1px solid #5d8ba4;
+  width: 50%;
+  padding: 1.5%;
+  margin: 1.2%;
+  border-radius: 7px;
+  text-transform: uppercase;
+}
+.invitation-content .btn-group a.btn-link:hover {
+  color: #fff;
+  background-color: #5d8ba4;
+}
+@media (max-width: 480px) {
+  .invitation-content .invitation-text {
+    font-size: 2vw;
+  }
+  .invitation-content .name-couple p {
+    font-size: 9vw;
+  }
+  .invitation-content .name-couple p.middle {
+    font-size: 5vw;
+  }
+  .invitation-content .save-ourdate {
+    font-size: 2vw;
+  }
+  .invitation-content .btn-group a.btn-link {
+    font-size: 2vw;
+  }
+}
+
+/*# sourceMappingURL=invitation.css.map */
