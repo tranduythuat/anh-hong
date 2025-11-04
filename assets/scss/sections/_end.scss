@@ -3,7 +3,8 @@
 
 .end {
     width: 100%;
-    min-height: 920px;
+    min-height: 719px;
+    aspect-ratio: 480 / 719;
     position: relative;
     margin-top: 20%;
     img {
@@ -27,9 +28,8 @@
     .text-overlay {
         position: absolute;
         width: 100%;
-        top: 0;
         right: 50%;
-        top: 25%;
+        top: 28%;
         transform: translateX(50%) translateY(100%) rotate(90deg) ;
         z-index: 2;
         font-size: 2em;

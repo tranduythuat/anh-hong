@@ -39,12 +39,14 @@ body {
 }
 
 .container {
+  background-color: #fff;
   position: relative;
   max-width: 480px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 header {
@@ -322,7 +324,7 @@ section {
     font-size: 2.2vw;
   }
   .wedding-info .date-time h2 {
-    font-size: 12vw;
+    font-size: 9vw;
   }
   .wedding-info .date-time .timeline .timeline-item .title {
     font-size: 3vw;
@@ -563,7 +565,8 @@ section {
 
 .end {
   width: 100%;
-  min-height: 920px;
+  min-height: 719px;
+  aspect-ratio: 480/719;
   position: relative;
   margin-top: 20%;
 }
@@ -575,9 +578,8 @@ section {
 .end .text-overlay {
   position: absolute;
   width: 100%;
-  top: 0;
   right: 50%;
-  top: 25%;
+  top: 28%;
   transform: translateX(50%) translateY(100%) rotate(90deg);
   z-index: 2;
   font-size: 2em;
