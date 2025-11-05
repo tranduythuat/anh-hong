@@ -27,9 +27,8 @@
 
     .text-overlay {
         position: absolute;
-        width: 100%;
         right: 50%;
-        top: 28%;
+        top: 8%;
         transform: translateX(50%) translateY(100%) rotate(90deg) ;
         z-index: 2;
         font-size: 2em;

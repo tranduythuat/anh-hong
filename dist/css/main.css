@@ -441,9 +441,6 @@ section {
   justify-content: end;
   flex-direction: column;
 }
-.gallery-01 .gallery-row:first-child .gallery-text p:nth-child(3), .gallery-01 .gallery-row:first-child .gallery-text p:nth-child(6) {
-  padding-bottom: 15px;
-}
 .gallery-01 .gallery-row:last-child .gallery-text {
   font-size: 1.5rem;
   padding-left: 5%;
@@ -577,9 +574,8 @@ section {
 }
 .end .text-overlay {
   position: absolute;
-  width: 100%;
   right: 50%;
-  top: 28%;
+  top: 8%;
   transform: translateX(50%) translateY(100%) rotate(90deg);
   z-index: 2;
   font-size: 2em;
