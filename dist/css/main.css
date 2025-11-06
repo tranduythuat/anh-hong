@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "1FTV-BLUSHING-ROSE";
   src: url("../../assets/fonts/1FTV-BLUSHING-ROSE.TTF") format("truetype");
@@ -562,8 +563,8 @@ section {
 
 .end {
   width: 100%;
-  min-height: 719px;
-  aspect-ratio: 480/719;
+  height: 725px;
+  aspect-ratio: 480/725;
   position: relative;
   margin-top: 20%;
 }
@@ -573,14 +574,20 @@ section {
   object-fit: cover;
 }
 .end .text-overlay {
-  position: absolute;
-  right: 50%;
-  top: 8%;
-  transform: translateX(50%) translateY(100%) rotate(90deg);
-  z-index: 2;
-  font-size: 2em;
   color: rgba(45, 138, 138, 0.9019607843);
-  letter-spacing: 4.5px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  font-size: 1.7em;
+  letter-spacing: 3px;
+  text-align: center;
+  white-space: nowrap; /* tránh xuống dòng */
+}
+.end .text-overlay.en {
+  top: 22%;
+}
+.end .text-overlay.vi {
+  top: 20%;
 }
 
 /*# sourceMappingURL=main.css.map */

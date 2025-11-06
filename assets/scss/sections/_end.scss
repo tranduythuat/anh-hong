@@ -3,8 +3,8 @@
 
 .end {
     width: 100%;
-    min-height: 719px;
-    aspect-ratio: 480 / 719;
+    height: 725px;
+    aspect-ratio: 480 / 725;
     position: relative;
     margin-top: 20%;
     img {
@@ -26,13 +26,21 @@
     // }
 
     .text-overlay {
-        position: absolute;
-        right: 50%;
-        top: 8%;
-        transform: translateX(50%) translateY(100%) rotate(90deg) ;
-        z-index: 2;
-        font-size: 2em;
         color: #2d8a8ae6;
-        letter-spacing: 4.5px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        font-size: 1.7em;
+        letter-spacing: 3px;
+        text-align: center;
+        white-space: nowrap; /* tránh xuống dòng */
+    }
+
+    .text-overlay.en {
+        top: 22%;
+    }
+
+    .text-overlay.vi {
+        top: 20%;
     }
 }
