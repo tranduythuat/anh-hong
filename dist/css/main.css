@@ -577,17 +577,12 @@ section {
   color: rgba(45, 138, 138, 0.9019607843);
   position: absolute;
   left: 50%;
+  top: 16%;
   transform: translate(-50%, -50%) rotate(90deg);
-  font-size: 1.7em;
+  font-size: 2em;
   letter-spacing: 3px;
   text-align: center;
   white-space: nowrap; /* tránh xuống dòng */
-}
-.end .text-overlay.en {
-  top: 22%;
-}
-.end .text-overlay.vi {
-  top: 20%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -29,18 +29,11 @@
         color: #2d8a8ae6;
         position: absolute;
         left: 50%;
+        top: 16%;
         transform: translate(-50%, -50%) rotate(90deg);
-        font-size: 1.7em;
+        font-size: 2em;
         letter-spacing: 3px;
         text-align: center;
         white-space: nowrap; /* tránh xuống dòng */
-    }
-
-    .text-overlay.en {
-        top: 22%;
-    }
-
-    .text-overlay.vi {
-        top: 20%;
     }
 }
