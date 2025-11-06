@@ -70,7 +70,9 @@ async function handleFormSubmit(e, lang) {
     },
   });
 
-  const url = lang === 'vi' ? 'vi_url': 'en_url';
+  const url = lang === 'vi' 
+    ? 'https://script.google.com/macros/s/AKfycbwpbayzLWQBaWAN2IbKLQsgtcEYoNJ1CH1CJT2NeM6qHJ6YhSFNBw6c9_mfEGnQXUO01Q/exec?sheet=vi'
+    : 'https://script.google.com/macros/s/AKfycbwpbayzLWQBaWAN2IbKLQsgtcEYoNJ1CH1CJT2NeM6qHJ6YhSFNBw6c9_mfEGnQXUO01Q/exec?sheet=en';
 
   console.log('url', url)
 
